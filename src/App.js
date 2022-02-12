@@ -1,5 +1,8 @@
 import React from "react";
+import styled from "styled-components/native";
+import Input from "./components/Input";
 import User from "./components/User";
+import { UserProvider } from "./contexts/User";
 
 const Container = styled.View`
   flex: 1;
@@ -10,9 +13,12 @@ const Container = styled.View`
 
 const App = () => {
   return (
-    <Container>
-      <User />
-    </Container>
+    <UserProvider>
+      <Container>
+        <User />
+        <Input />
+      </Container>
+    </UserProvider>
   );
 };
 
