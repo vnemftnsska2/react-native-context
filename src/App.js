@@ -5,6 +5,7 @@ import Input from "./components/Input";
 import User from "./components/User";
 import { UserProvider } from "./contexts/User";
 import StackNavigation from "./navigations/Stack";
+import TabNavigation from "./navigations/Tab";
 
 const Container = styled.View`
   flex: 1;
@@ -23,7 +24,8 @@ const App = () => {
     // </UserProvider>
 
     <NavigationContainer>
-      <StackNavigation />
+      {/* <StackNavigation /> */}
+      <TabNavigation />
     </NavigationContainer>
   );
 };
